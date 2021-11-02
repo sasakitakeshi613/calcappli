@@ -81,6 +81,24 @@ public class SampleController implements Initializable{
 			shiki = "plus";
 			s = "＋";
 		});
+		bminus.setOnAction((ActionEvent event)->{
+			k1 = Integer.parseInt(l1.getText());
+			l1.setText(l1.getText() +""+ "-");
+			shiki = "minus";
+			s = "ー";
+		});
+		bper.setOnAction((ActionEvent event)->{
+			k1 = Integer.parseInt(l1.getText());
+			l1.setText(l1.getText() +""+ "÷");
+			shiki = "per";
+			s = "／";
+		});
+		bmulti.setOnAction((ActionEvent event)->{
+			k1 = Integer.parseInt(l1.getText());
+			l1.setText(l1.getText() +""+ "×");
+			shiki = "multi";
+			s = "✕";
+		});
 		bequal.setOnAction((ActionEvent event)->{
 			k4 = Integer.toString(k1);
 			k3 = l1.getText();
@@ -91,13 +109,13 @@ public class SampleController implements Initializable{
 			case "plus":
 				k1 += k2;
 				break;
-			case "bm":
+			case "minus":
 				k1 -= k2;
 				break;
-			case "bw":
+			case "per":
 				k1 /= k2;
 				break;
-			case "bk":
+			case "multi":
 				k1 *= k2;
 				break;
 			}
